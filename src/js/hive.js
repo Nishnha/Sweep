@@ -1,9 +1,17 @@
+const path = require('path');
+import './lib/hex.js';
+import $ from 'jquery/dist/jquery.min';
+import '../css/desktop.scss';
+
 var canvas = document.getElementById("canvas"),
     ctx = canvas.getContext("2d");
 
 var ROOT3OVER2 = Math.sqrt(3) / 2,
     scale = 60,
     board = [];
+
+var playerSpace;
+var hex;
 
 // Draw a hexagon with a given length about (x, y) and a fill
 function drawHex(x, y, length, fill) {

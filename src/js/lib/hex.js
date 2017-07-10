@@ -96,7 +96,7 @@ function qoffset_to_cube(offset, h) {
     return Hex(q, r, s);
 }
 
-function roffset_from_cube(offset, h {
+function roffset_from_cube(offset, h) {
     var col = h.q + Math.trunc((h.r + offset * (h.r & 1)) / 2);
     var row = h.r;
     return OffsetCoord(col, row);
